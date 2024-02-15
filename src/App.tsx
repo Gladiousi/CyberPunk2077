@@ -1,3 +1,4 @@
+
 import { ChakraProvider } from '@chakra-ui/react';
 import MainPage from "./Container/MainPage";
 import theme from './theme/Theme';
