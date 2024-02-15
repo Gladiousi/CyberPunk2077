@@ -1,4 +1,3 @@
-
 import { ChakraProvider } from '@chakra-ui/react';
 import MainPage from "./Container/MainPage";
 import theme from './theme/Theme';
@@ -11,4 +10,4 @@ export function App() {
   );
 }
 
-export default App
+export default App;
