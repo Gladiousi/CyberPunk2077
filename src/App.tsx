@@ -7,6 +7,7 @@ export function App() {
     <ChakraProvider theme={theme}>
       <MainPage />
     </ChakraProvider>
+    // TESt
   );
 }
 
