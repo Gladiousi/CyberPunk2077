@@ -1,11 +1,17 @@
-import MainPage from "./Container/Main/MainPage";
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { theme as chakraTheme } from '@chakra-ui/react';
+import MainPage from "./Container/MainPage";
 
-function App() {
+const theme = extendTheme({
+  ...chakraTheme,
+});
+
+export function App() {
   return (
-    <>
+    <ChakraProvider theme={theme}>
       <MainPage />
-    </>
-  )
+    </ChakraProvider>
+  );
 }
 
 export default App
