@@ -1,6 +1,7 @@
-function Buy () {
-    return(
-        <></>
+function Buy() {
+    return (
+        <>
+        </>
     )
 }
 
