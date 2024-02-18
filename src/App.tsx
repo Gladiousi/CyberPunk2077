@@ -1,15 +1,12 @@
-
-import { ChakraProvider } from '@chakra-ui/react';
+import { Box } from "@chakra-ui/react";
 import MainPage from "./Container/MainPage";
-import theme from './theme/Theme';
 
-export function App() {
+function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <Box minW='100%' minH='100vh' m='0' p='0' >
       <MainPage />
-    </ChakraProvider>
-    // TESt
-  );
+    </Box>
+  )
 }
 
 export default App
