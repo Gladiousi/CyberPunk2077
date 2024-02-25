@@ -19,7 +19,7 @@ export const Hero=() => {
     const textSizes: { [key: string]: string } = {
         base: '1.5rem',
         sm: '2rem',
-        md: '2rem',
+        md: '1.5rem',
         lg: '2.5rem',
         xl: '3xl',
         '2xl': '4xl',
@@ -51,7 +51,7 @@ export const Hero=() => {
                 top={variant === 'base' || variant === 'sm' ? '80dvh' : '70dvh'}
                 color="white"
             >
-                <Text fontSize={textSizes[variant as keyof typeof textSizes]} color='primary.500' mb='5px'>
+                <Text fontSize={textSizes[variant as keyof typeof textSizes]} color='Black' mb='5px' fontWeight="bold">
                     Доступно на всех платформах
                 </Text>
                 <Button variant="primary" fontSize={textSizes[variant as keyof typeof textSizes]} p="10" >
