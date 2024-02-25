@@ -102,8 +102,8 @@ export const Footer = () => {
             >
                 <Text
                     color="white"
-                    marginTop="5"
-                    fontSize="1rem"
+                    marginTop="2"
+                    fontSize="0.7rem"
                 >
                     CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®
                 </Text>
