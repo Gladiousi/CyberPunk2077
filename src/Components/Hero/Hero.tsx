@@ -18,9 +18,9 @@ export const Hero=() => {
 
     const textSizes: { [key: string]: string } = {
         base: '1.5rem',
-        sm: '2rem',
+        sm: '1.5rem',
         md: '1.5rem',
-        lg: '2.5rem',
+        lg: '2rem',
         xl: '3xl',
         '2xl': '4xl',
     };
