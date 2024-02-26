@@ -25,6 +25,14 @@ export const Footer = () => {
         xl: '3xl',
         '2xl': '4xl',
     };
+    const textSizes = {
+        base: 'md',
+        sm: 'sm',
+        md: 'md',
+        lg: 'lg',
+        xl: 'lg',
+        '2xl': '4xl',
+    };
     let variant: string | undefined = useBreakpointValue({ base: "base", sm: "sm", md: "md", lg: "lg", xl: 'xl', '2xl': '2xl' });
     if (variant === undefined) {
         variant = "base";
@@ -35,67 +43,71 @@ export const Footer = () => {
                 display="flex"
                 position="absolute"
                 w={variant === 'base' || variant === 'sm' ? '100dvw' : '25dvw'}
-                h="15dvh"
+                marginTop={variant === 'base' || variant === 'sm' ? '3dvh' : '3dvh'}
                 bgColor='white'
                 justifyContent={variant === 'base' || variant === 'sm' ? 'center' : 'left'}
+                alignItems="center"
+
             >
                 <Image
                     src="/14.png"
                     w={ImageWigth[variant as keyof typeof ImageWigth]}
                     h={ImageHigth[variant as keyof typeof ImageHigth]}
                     marginLeft={ImageMargin[variant as keyof typeof ImageMargin]}
-                    marginTop="6"
                 />
-               <Box
-                display="flex"
-                position="absolute"
-                w={variant === 'base' || variant === 'sm' ? '100dvw' : '15dvw'}
-                h="15dvh"
-                bgColor='White'
-                marginTop={variant === 'base' || variant === 'sm' ? '10dvh' : '0dvh'}
-                marginLeft={variant === 'base' || variant === 'sm' ? '0dvh' : '20dvh'}
-                justifyContent={variant === 'base' || variant === 'sm' ? 'center' : 'left'}
-               >
-               <Image
-                    src="/15.webp"
-                    w={ImageWigth[variant as keyof typeof ImageWigth]}
-                    h={ImageHigth[variant as keyof typeof ImageHigth]}
-                    marginLeft={ImageMargin[variant as keyof typeof ImageMargin]}
-                    marginTop="6"
-                />
-               </Box>
+                <Box
+                    display="flex"
+                    position="absolute"
+                    w={variant === 'base' || variant === 'sm' ? '100dvw' : '15dvw'}
+                    bgColor='White'
+                    marginTop={variant === 'base' || variant === 'sm' ? '20dvh' : '0dvh'}
+                    marginLeft={variant === 'base' || variant === 'sm' ? '0dvh' : '20dvh'}
+                    justifyContent={variant === 'base' || variant === 'sm' ? 'center' : 'center'}
+                    alignItems="center"
+                >
+                    <Image
+                        src="/15.webp"
+                        w={ImageWigth[variant as keyof typeof ImageWigth]}
+                        h={ImageHigth[variant as keyof typeof ImageHigth]}
+                        marginLeft={ImageMargin[variant as keyof typeof ImageMargin]}
+                    />
+                </Box>
             </Box>
             <Box
                 display="flex"
                 position="absolute"
                 w={variant === 'base' || variant === 'sm' ? '100dvw' : '50dvw'}
-                h="15dvh"
+                h="15vh"
                 bgColor='white'
                 marginTop={variant === 'base' || variant === 'sm' ? '20dvh' : '0dvh'}
                 marginLeft={variant === 'base' || variant === 'sm' ? '0dvw' : '50dvw'}
                 textAlign="center"
+                justifyContent="center"
+                alignItems="center"
             >
-                <Text
-                    marginTop="5dvh"
-                    fontSize="1.3rem"
-                    marginLeft={variant === 'base' || variant === 'sm' ? '5dvw' : '10dvw'}
-                    fontWeight="bold"
+                <Box
+                    display='flex'
+                    alignItems='row'
+                    gap='20px'
                 >
-                    Лицензия
-                </Text>
-                <Text
-                    marginTop="5.2dvh"
-                    fontSize="1.2rem"
-                    marginLeft={variant === 'base' || variant === 'sm' ? '8dvw' : '3dvw'}
-                    fontWeight="bold"
-                >
-                    Политика конфиденциальности
-                </Text>
+                    <Text
+                        fontSize={textSizes[variant as keyof typeof textSizes]}
+                        fontWeight="bold"
+                    >
+                        Лицензия
+                    </Text>
+                    <Text
+                        fontSize={textSizes[variant as keyof typeof textSizes]}
+                        fontWeight="bold"
+                    >
+                        Политика конфиденциальности
+                    </Text>
+                </Box>
             </Box>
+
             <Box
                 position="absolute"
                 w="100dvw"
-                h="4dvh"
                 bgColor='Black'
                 marginTop={variant === 'base' || variant === 'sm' ? '30dvh' : '13dvh'}
                 textAlign="center"
@@ -103,7 +115,7 @@ export const Footer = () => {
                 <Text
                     color="white"
                     marginTop="2"
-                    fontSize="0.7rem"
+                    fontSize="100%"
                 >
                     CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®
                 </Text>

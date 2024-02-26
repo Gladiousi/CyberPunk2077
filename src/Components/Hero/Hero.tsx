@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Text, Button, useBreakpointValue } from "@chakra-ui/react";
 
-export const Hero=() => {
+export const Hero = () => {
     const [currentImage, setCurrentImage] = useState<number>(0);
     const images: string[] = [
         "/1.webp",
@@ -16,11 +16,21 @@ export const Hero=() => {
         return () => clearInterval(interval);
     }, [images.length]);
 
-    const textSizes: { [key: string]: string } = {
-        base: '1.5rem',
-        sm: '1.5rem',
-        md: '1.5rem',
-        lg: '2rem',
+    const ButtonSize = {
+        base: 'md',
+        sm: 'lg',
+        md: 'sm',
+        lg: 'lg',
+        xl: 'lg',
+        '2xl': 'lg'
+    };
+
+
+    const textSizes = {
+        base: 'md',
+        sm: 'lg',
+        md: 'xl',
+        lg: '2xl',
         xl: '3xl',
         '2xl': '4xl',
     };
@@ -42,19 +52,18 @@ export const Hero=() => {
             <Box
                 clipPath="polygon(10% 0, 100% 0, 100% 83%, 90% 100%, 0 100%, 0 17%)"
                 position="absolute"
-                h="20dvh"
-                bgColor='secondary.500'
+                bgColor='yellow'
                 p='4'
                 textAlign="center"
-                w={variant === 'base' || variant === 'sm' ? '100dvw' : '35dvw'}
-                right={(variant === 'base' || variant === 'sm') ? '0' : '10 '}
+                w={variant === 'base' || variant === 'sm' ? '100dvw' : '25dvw'}
+                right={variant === 'base' || variant === 'sm' ? '0dvw' : '2dvw'}
                 top={variant === 'base' || variant === 'sm' ? '80dvh' : '70dvh'}
                 color="white"
             >
                 <Text fontSize={textSizes[variant as keyof typeof textSizes]} color='Black' mb='5px' fontWeight="bold">
                     Доступно на всех платформах
                 </Text>
-                <Button variant="primary" fontSize={textSizes[variant as keyof typeof textSizes]} p="10" >
+                <Button variant="primary" fontSize={textSizes[variant as keyof typeof textSizes]} size={ButtonSize[variant as keyof typeof ButtonSize]} >
                     Узнать больше
                 </Button>
             </Box>
