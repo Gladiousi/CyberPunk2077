@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Text, Button, useBreakpointValue } from "@chakra-ui/react";
 
-export const Hero=() => {
+export const Hero = () => {
     const [currentImage, setCurrentImage] = useState<number>(0);
     const images: string[] = [
         "/1.webp",
@@ -17,10 +17,12 @@ export const Hero=() => {
     }, [images.length]);
 
     const ButtonSize = {
-        base: 'sm',
-        sm: 'md',
-        md: 'md',
+        base: 'md',
+        sm: 'lg',
+        md: 'sm',
         lg: 'lg',
+        xl: 'lg',
+        '2xl': 'lg'
     };
 
 
@@ -53,7 +55,6 @@ export const Hero=() => {
                 bgColor='yellow'
                 p='4'
                 textAlign="center"
-                h="15%"
                 w={variant === 'base' || variant === 'sm' ? '100dvw' : '25dvw'}
                 right={variant === 'base' || variant === 'sm' ? '0dvw' : '2dvw'}
                 top={variant === 'base' || variant === 'sm' ? '80dvh' : '70dvh'}

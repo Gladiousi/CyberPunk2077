@@ -47,7 +47,7 @@ export const Footer = () => {
                 bgColor='white'
                 justifyContent={variant === 'base' || variant === 'sm' ? 'center' : 'left'}
                 alignItems="center"
-                
+
             >
                 <Image
                     src="/14.png"
@@ -55,23 +55,23 @@ export const Footer = () => {
                     h={ImageHigth[variant as keyof typeof ImageHigth]}
                     marginLeft={ImageMargin[variant as keyof typeof ImageMargin]}
                 />
-               <Box
-                display="flex"
-                position="absolute"
-                w={variant === 'base' || variant === 'sm' ? '100dvw' : '15dvw'}
-                bgColor='White'
-                marginTop={variant === 'base' || variant === 'sm' ? '20dvh' : '0dvh'}
-                marginLeft={variant === 'base' || variant === 'sm' ? '0dvh' : '20dvh'}
-                justifyContent={variant === 'base' || variant === 'sm' ? 'center' : 'center'}
-                alignItems="center"
-               >
-               <Image
-                    src="/15.webp"
-                    w={ImageWigth[variant as keyof typeof ImageWigth]}
-                    h={ImageHigth[variant as keyof typeof ImageHigth]}
-                    marginLeft={ImageMargin[variant as keyof typeof ImageMargin]}
-                />
-               </Box>
+                <Box
+                    display="flex"
+                    position="absolute"
+                    w={variant === 'base' || variant === 'sm' ? '100dvw' : '15dvw'}
+                    bgColor='White'
+                    marginTop={variant === 'base' || variant === 'sm' ? '20dvh' : '0dvh'}
+                    marginLeft={variant === 'base' || variant === 'sm' ? '0dvh' : '20dvh'}
+                    justifyContent={variant === 'base' || variant === 'sm' ? 'center' : 'center'}
+                    alignItems="center"
+                >
+                    <Image
+                        src="/15.webp"
+                        w={ImageWigth[variant as keyof typeof ImageWigth]}
+                        h={ImageHigth[variant as keyof typeof ImageHigth]}
+                        marginLeft={ImageMargin[variant as keyof typeof ImageMargin]}
+                    />
+                </Box>
             </Box>
             <Box
                 display="flex"
@@ -85,25 +85,29 @@ export const Footer = () => {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Text
-                    fontSize={textSizes[variant as keyof typeof textSizes]}
-                    fontWeight="bold"
-                    marginLeft="10dvw"
+                <Box
+                    display='flex'
+                    alignItems='row'
+                    gap='20px'
                 >
-                    Лицензия
-                </Text>
-                <Text
-                    fontSize={textSizes[variant as keyof typeof textSizes]}
-                    marginLeft={variant === 'base' || variant === 'sm' ? '8dvw' : '3dvw'}
-                    fontWeight="bold"
-                >
-                    Политика конфиденциальности
-                </Text>
+                    <Text
+                        fontSize={textSizes[variant as keyof typeof textSizes]}
+                        fontWeight="bold"
+                    >
+                        Лицензия
+                    </Text>
+                    <Text
+                        fontSize={textSizes[variant as keyof typeof textSizes]}
+                        fontWeight="bold"
+                    >
+                        Политика конфиденциальности
+                    </Text>
+                </Box>
             </Box>
+
             <Box
                 position="absolute"
                 w="100dvw"
-                h="4dvh"
                 bgColor='Black'
                 marginTop={variant === 'base' || variant === 'sm' ? '30dvh' : '13dvh'}
                 textAlign="center"
@@ -111,7 +115,7 @@ export const Footer = () => {
                 <Text
                     color="white"
                     marginTop="2"
-                    fontSize="70%"
+                    fontSize="100%"
                 >
                     CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®
                 </Text>
